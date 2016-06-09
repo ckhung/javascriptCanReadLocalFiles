@@ -1,0 +1,22 @@
+// dot -Tsvg graphic-workflow.dot -o graphic-workflow.svg
+digraph "reading local file using jQuery.get" {
+
+    overlap = scale;
+    // rankdir=LR;
+
+    ok [ label="OK" ];
+    html [ label="open html as?" ];
+    browser [ label="browser?" ];
+    chromium [ label="--allow-file-access-from-files" ];
+    using [ label="using?" ];
+    no [ label="NO!"; fontcolor="red" ];
+
+    html -> ok [ label="http://" ];
+    html -> browser [ label="file:///"; fontcolor="red" ];
+    browser -> chromium [ label="chromium\nopera" ];
+    chromium -> ok;
+    browser -> using [ label="firefox"; fontcolor="red" ];
+    using -> ok [ label="jQuery.getJSON\njQuery.get+window.setTimeout" ];
+    using -> no [ label="jQuery.get callback\njQuery.when jQuery.done"; fontcolor="red" ];
+}
+

@@ -1,0 +1,28 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<head>
+<script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+<script src="readLocal.js"></script>
+
+<title>Javascript Can Read Local Files</title>
+</head>
+<body>
+<h1>Javascript Can Read Local Files</h1>
+
+<p>Please turn on the console in your browser
+and study readLocal.js to see the effects
+of various pieces of javascript code
+for reading a local file.
+
+<p>Notice that in firefox when opening this .html
+as file:///... , callbacks for $.get() is not executed
+but the data is read anyway, with some delay.
+Therefore with some appropriate amount of delay,
+you can begin to process the data
+in window.setTimeout()'s callback.
+
+<pre id="pre_display">
+</pre>
+
+</body>
+</html>

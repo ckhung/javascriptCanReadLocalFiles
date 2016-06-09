@@ -85,4 +85,5 @@ If desired, your program can perform a check
 `if (window.location.protocol == 'file:') { ... }`
 to see if this hack is needed.
 
-![how to read a local file in javascript](https://raw.githubusercontent.com/ckhung/javascriptCanReadLocalFiles/master/readLocal.svg)
+The following diagram summarizes the above explanations:
+![how to read a local file in javascript](http://user.frdm.info/ckhung/m/16/readLocal.svg)

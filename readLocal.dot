@@ -1,4 +1,4 @@
-// dot -Tsvg graphic-workflow.dot -o graphic-workflow.svg
+// dot -Tsvg readLocal.dot > readLocal.svg
 digraph "reading local file using jQuery.get" {
 
     overlap = scale;

@@ -75,8 +75,8 @@
 <g id="edge5" class="edge"><title>chromium&#45;&gt;no</title>
 <path fill="none" stroke="black" d="M159.33,-101.851C156.731,-86.2823 156.66,-67.0503 167.445,-54 184.016,-33.9479 255.564,-25.0232 300.392,-21.3375"/>
 <polygon fill="black" stroke="black" points="300.916,-24.8076 310.617,-20.549 300.377,-17.8284 300.916,-24.8076"/>
-<text text-anchor="middle" x="213.445" y="-72.8" font-family="Times,serif" font-size="14.00">no</text>
-<text text-anchor="middle" x="213.445" y="-57.8" font-family="Times,serif" font-size="14.00">(e.g. on android)</text>
+<text text-anchor="middle" x="213.445" y="-72.8" font-family="Times,serif" font-size="14.00" fill="red">no</text>
+<text text-anchor="middle" x="213.445" y="-57.8" font-family="Times,serif" font-size="14.00" fill="red">(e.g. on android)</text>
 </g>
 <!-- using&#45;&gt;ok -->
 <g id="edge7" class="edge"><title>using&#45;&gt;ok</title>

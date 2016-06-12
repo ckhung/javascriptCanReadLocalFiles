@@ -15,7 +15,7 @@ digraph "reading local file using jQuery.get" {
     html -> browser [ label="file:///"; fontcolor="red" ];
     browser -> chromium [ label="chromium\nopera" ];
     chromium -> ok [ label="yes" ];
-    chromium -> no [ label="no\n(e.g. on android)" ];
+    chromium -> no [ label="no\n(e.g. on android)"; fontcolor="red" ];
     browser -> using [ label="firefox"; fontcolor="red" ];
     using -> ok [ label="jQuery.getJSON\njQuery.get+window.setTimeout" ];
     using -> no [ label="jQuery.get callback\njQuery.when jQuery.done"; fontcolor="red" ];

@@ -46,6 +46,7 @@ is way more than a bandaid.
 The truth is, a javascript program _can_ read from local files
 with or without a web server, with some caveats.
 So those 'you-can-not' answers are plain wrong.
+(Maybe the respondents misunderstood the newbies' questions?)
 And we loudly disagree with those 'you-should-not' answers
 by documenting how to do it in various situations
 for the confused javascript newbies.

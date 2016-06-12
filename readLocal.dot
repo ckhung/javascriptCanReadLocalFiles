@@ -7,14 +7,15 @@ digraph "reading local file using jQuery.get" {
     ok [ label="OK" ];
     html [ label="open html as?" ];
     browser [ label="browser?" ];
-    chromium [ label="--allow-file-access-from-files" ];
+    chromium [ label="--allow-file-access-from-files\noption available?" ];
     using [ label="using?" ];
     no [ label="NO!"; fontcolor="red" ];
 
     html -> ok [ label="http://" ];
     html -> browser [ label="file:///"; fontcolor="red" ];
     browser -> chromium [ label="chromium\nopera" ];
-    chromium -> ok;
+    chromium -> ok [ label="yes" ];
+    chromium -> no [ label="no\n(e.g. on android)" ];
     browser -> using [ label="firefox"; fontcolor="red" ];
     using -> ok [ label="jQuery.getJSON\njQuery.get+window.setTimeout" ];
     using -> no [ label="jQuery.get callback\njQuery.when jQuery.done"; fontcolor="red" ];

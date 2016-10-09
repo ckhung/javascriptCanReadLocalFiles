@@ -87,4 +87,4 @@ If desired, your program can perform a check
 to see if this hack is needed.
 
 The following diagram summarizes the above explanations:
-![how to read a local file in javascript](http://user.frdm.info/ckhung/m/16/readLocal.svg)
+![how to read a local file in javascript](https://ckhung.github.io/a/m/16/readLocal.svg)

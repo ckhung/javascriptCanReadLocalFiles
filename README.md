@@ -23,10 +23,18 @@ which tries to read a file from the unfortunate visitor's computer.
 We are talking about a javascript program trying to read
 data file and/or configuration file located at the same computer
 where the program is stored.
-If the ability to read files from the same directory were a
-security hole, then one might as well say that php, ruby,
-and cgi programs all have this hole wide open by default.
-This conclusion is absurd, and so is the premise.
+Sometimes we are not even talking about web servers.
+We are talking about opening a local html file in the browser
+(resulting in this kind of URL: <code>file:///...html</code>)
+and executing a local javascript that needs to read
+a data file, where the .html, the .js, and the data file
+are all in the same directory, and where the computer
+may even be off the Internet or any local network.
+If the ability to read files in such situations is a
+security hole, then one might as well say that
+the user's ability to open the browser is security hole,
+or that the availability of the computer power switch
+is a security hole. This is completely absurd.
 
 Another frequently given answer is that one has to
 run a local web server so that a javascript program

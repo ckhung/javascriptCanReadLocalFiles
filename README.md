@@ -25,7 +25,7 @@ data file and/or configuration file located at the same computer
 where the program is stored.
 Sometimes we are not even talking about web servers.
 We are talking about opening a local html file in the browser
-(resulting in this kind of URL: <code>file:///...html</code>)
+(resulting in this kind of URL: `file:///...html`)
 and executing a local javascript that needs to read
 a data file, where the .html, the .js, and the data file
 are all in the same directory, and where the computer
@@ -45,7 +45,8 @@ completely offline just like we run many programs written
 in any other programming laugnages.
 Yet it would make more sense if the browser defaults
 to allow reading local files when an .html file is
-opened as file:///... rather than http://localhost/...
+opened as `file:///...` as opposed to
+the potentially dangerous `http://...`
 and when the javascript file is also local.
 Running a web server simply for reading a local file
 is way more than a bandaid.
@@ -93,6 +94,14 @@ It's an ugly hack but it works.
 If desired, your program can perform a check
 `if (window.location.protocol == 'file:') { ... }`
 to see if this hack is needed.
+
+Using jQuery.getJSON() to read a local file
+may cause firefox to cough up an error message
+in the console reading "XML Parsing Error:
+not well-formed Location: file:///..." .
+This can be fixed by calling overrideMimeType().
+See [this QA](https://stackoverflow.com/questions/2618959/not-well-formed-warning-when-loading-client-side-json-in-firefox-via-jquery-aj)
+for details.
 
 The following diagram summarizes the above explanations:
 ![how to read a local file in javascript](https://ckhung.github.io/a/m/16/readLocal.svg)

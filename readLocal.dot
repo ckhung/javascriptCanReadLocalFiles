@@ -12,11 +12,14 @@ digraph "reading local file using jQuery.get" {
     no [ label="NO!"; fontcolor="red" ];
 
     html -> ok [ label="http://" ];
-    html -> browser [ label="file:///"; fontcolor="red" ];
+    html -> browser [ label="file:///"; ];
     browser -> chromium [ label="chromium\nopera" ];
     chromium -> ok [ label="yes" ];
     chromium -> no [ label="no\n(e.g. on android)"; fontcolor="red" ];
-    browser -> using [ label="firefox"; fontcolor="red" ];
+    browser -> firefox [ label="firefox"; ];
+    firefox -> strict_origin_policy [ label="strict_origin_policy?"; ];
+    strict_origin_policy -> no [ label="False"; fontcolor="red" ];
+    strict_origin_policy -> using [ label="True"; ];
     using -> ok [ label="jQuery.getJSON\njQuery.get+window.setTimeout" ];
     using -> no [ label="jQuery.get callback\njQuery.when jQuery.done"; fontcolor="red" ];
 }

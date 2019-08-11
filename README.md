@@ -75,17 +75,19 @@ itself is loaded from an html page specified as
 "http://localhost/..." .
 (The "local web server" solution.)
 
-If the javascript file itself is loaded from
-an html page specified as "file:///..."
-then jQuery.get() and jQuery.getJSON() won't work in chromium.
+If you use chromium to open a local html page
+which in turn loads a local javascript file as "file:///...",
+then jQuery.get() and jQuery.getJSON() won't work.
 However you can solve it by invoking the chromium command
 like this: `chromium-browser --allow-file-access-from-files`.
 The same is true with `opera --allow-file-access-from-files`.
 Unfortunately this is not an option for
 browsers on android phones and tablets.
 
-Thankfully the jQuery-firefox combination allows
-jQuery.getJSON() to work in the "file:///....html" situation.
+If you use firefox to open a local html page
+which in turn loads a local javascript file as "file:///...",
+then you need to [set security.fileuri.strict\_origin\_policy to False](http://testingfreak.com/how-to-fix-cross-origin-request-security-cors-error-in-firefox-chrome-and-ie/) in firefox's about:config.
+After that, jQuery.getJSON() works.
 However in this situation the jQuery.get() callback
 does not work directly. Yet you can call jQuery.get()
 to get the data and call window.setTimeout()

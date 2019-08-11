@@ -8,6 +8,7 @@ digraph "reading local file using jQuery.get" {
     html [ label="open html as?" ];
     browser [ label="browser?" ];
     chromium [ label="--allow-file-access-from-files\noption available?" ];
+    firefox [ label="strict_origin_policy?" ];
     using [ label="using?" ];
     no [ label="NO!"; fontcolor="red" ];
 
@@ -17,9 +18,8 @@ digraph "reading local file using jQuery.get" {
     chromium -> ok [ label="yes" ];
     chromium -> no [ label="no\n(e.g. on android)"; fontcolor="red" ];
     browser -> firefox [ label="firefox"; ];
-    firefox -> strict_origin_policy [ label="strict_origin_policy?"; ];
-    strict_origin_policy -> no [ label="False"; fontcolor="red" ];
-    strict_origin_policy -> using [ label="True"; ];
+    firefox -> no [ label="True"; fontcolor="red" ];
+    firefox -> using [ label="False"; ];
     using -> ok [ label="jQuery.getJSON\njQuery.get+window.setTimeout" ];
     using -> no [ label="jQuery.get callback\njQuery.when jQuery.done"; fontcolor="red" ];
 }

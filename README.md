@@ -78,7 +78,7 @@ itself is loaded from an html page specified as
 If you use chromium to open a local html page
 which in turn loads a local javascript file as "file:///...",
 then jQuery.get() and jQuery.getJSON() won't work.
-You have to close all existing chromium windows first,
+You have to [close all existing chromium windows first](https://stackoverflow.com/a/23758738),
 then start it from the command line:
 `chromium-browser --allow-file-access-from-files`.
 Then the same html page will work now.

@@ -78,8 +78,10 @@ itself is loaded from an html page specified as
 If you use chromium to open a local html page
 which in turn loads a local javascript file as "file:///...",
 then jQuery.get() and jQuery.getJSON() won't work.
-However you can solve it by invoking the chromium command
-like this: `chromium-browser --allow-file-access-from-files`.
+You have to close all existing chromium windows first,
+then start it from the command line:
+`chromium-browser --allow-file-access-from-files`.
+Then the same html page will work now.
 The same is true with `opera --allow-file-access-from-files`.
 Unfortunately this is not an option for
 browsers on android phones and tablets.
